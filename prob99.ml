@@ -41,5 +41,13 @@ let is_pal l =
   
 (* 6. Find the nth element of list *)
 
+(* 7. Remove the duplicates in a list *)
+
+let rec remove_dupli list = 
+  match list with 
+  | [] -> []
+  | hd1::hd2::tl when hd1=hd2 -> remove_dupli (hd1::tl)
+  | hd::tl -> hd::remove_dupli tl
+
   
   
